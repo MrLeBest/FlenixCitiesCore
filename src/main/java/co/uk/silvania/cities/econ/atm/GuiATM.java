@@ -481,9 +481,9 @@ public class GuiATM extends GuiContainer {
     	
     	if (guiStage.equals("1")) {
 	    	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-	    	fontRendererObj.drawString("Welcome!", 68, -2, 0x007F0E);
-	    	fontRendererObj.drawString("Please enter your PIN,", 32, 8, 0x007F0E);
-	    	fontRendererObj.drawString("followed by 'Confirm'", 37, 18, 0x007F0E);
+	    	fontRendererObj.drawString("Bienvenue!", 68, -2, 0x007F0E);
+	    	fontRendererObj.drawString("S'il vous plait rentrer votre code PIN,", 32, 8, 0x007F0E);
+	    	fontRendererObj.drawString("continuer en confirmant", 37, 18, 0x007F0E);
     		if (enteredPin.length() == 0) {
     			fontRendererObj.drawString(underScore, 78, 48, 0x007F0E);
     		} else if (enteredPin.length() == 1) {
@@ -496,64 +496,64 @@ public class GuiATM extends GuiContainer {
     			fontRendererObj.drawString("****", 78, 48, 0x007F0E);
     		}
 	    	if (pinAttempt.equals("1")) {
-		    	fontRendererObj.drawString("Attempt 1 of 3.", 52, 68, 0x007F0E);
+		    	fontRendererObj.drawString("Essaie 1 sur 3.", 52, 68, 0x007F0E);
 	    	}
 	    	if (pinAttempt.equals("2")) {
-		    	fontRendererObj.drawString("Attempt 2 of 3.", 52, 68, 0xFFD800);
+		    	fontRendererObj.drawString("Essaie 2 sur 3.", 52, 68, 0xFFD800);
 	    	}
 	    	if (pinAttempt.equals("3")) {
-		    	fontRendererObj.drawString("Attempt 3 of 3.", 52, 68, 0xFF6A00);
+		    	fontRendererObj.drawString("Essaie 3 sur 3.", 52, 68, 0xFF6A00);
 	    	}
 	    	if (pinAttempt.equals("4")) {
-		    	fontRendererObj.drawString("Attempt 3 of 3.", 52, 68, 0x007F0E);
-	    		fontRendererObj.drawString("Card declined!", 53, 78, 0x7F0000);
+		    	fontRendererObj.drawString("Essaie 3 sur 3.", 52, 68, 0x007F0E);
+	    		fontRendererObj.drawString("Card refuser!", 53, 78, 0x7F0000);
 	    	}
     	}
     	if (guiStage.equals("2")) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-        	fontRendererObj.drawString("Withdraw", 12, -3, 0x007F0E);
+        	fontRendererObj.drawString("Retirer", 12, -3, 0x007F0E);
         	fontRendererObj.drawString("Balance", 126, -3, 0x007F0E);
-        	fontRendererObj.drawString("Eject Card", 109, 78, 0x007F0E);
+        	fontRendererObj.drawString("Ejecter la carte", 109, 78, 0x007F0E);
     	}
     	if (guiStage.equals("3")) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-    		fontRendererObj.drawString("Please select the amount", 26, -12, 0xFFD800);
-	    	fontRendererObj.drawString("you wish to withdraw.", 37, -2, 0xFFD800);
+    		fontRendererObj.drawString("S'il vous plait selectionner le montant", 26, -12, 0xFFD800);
+	    	fontRendererObj.drawString("que vous voulez retirer.", 37, -2, 0xFFD800);
         	fontRendererObj.drawString("10", 12, 24, 0x007F0E);
         	fontRendererObj.drawString("50", 12, 51, 0x007F0E);
         	fontRendererObj.drawString("250", 12, 78, 0x007F0E);
         	fontRendererObj.drawString("20", 153, 24, 0x007F0E);
         	fontRendererObj.drawString("100", 147, 51, 0x007F0E);
-        	fontRendererObj.drawString("Input Amount", 100, 78, 0x007F0E);
+        	fontRendererObj.drawString("Autre montant", 100, 78, 0x007F0E);
     	}
     	if (guiStage.equals("4")) {
     		fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-    		fontRendererObj.drawString("Your current balance is: ", 26, 8, 0x007F0E);
+    		fontRendererObj.drawString("Votre balance actuelle est: ", 26, 8, 0x007F0E);
     		fontRendererObj.drawString("$" + bal, 26, 18, 0x007F0E);
         	fontRendererObj.drawString("Back", 12, 78, 0x007F0E);
     	}
     	if (guiStage.equals("5")) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-    		fontRendererObj.drawString("Withdrawl Successful!", 35, 8, 0x007F0E);
-    		fontRendererObj.drawString("You have withdrawn", 39, 18, 0x007F0E);
+    		fontRendererObj.drawString("Retrait fais avec succes!", 35, 8, 0x007F0E);
+    		fontRendererObj.drawString("Vous avez retiter", 39, 18, 0x007F0E);
     		fontRendererObj.drawString("$" + econ.formatBalance(withdrawAmount) + " " + CityConfig.currencyLargePlural, 50, 28, 0x007F0E);
-    		fontRendererObj.drawString("Press Confirm to continue.", 22, 58, 0x007F0E);
+    		fontRendererObj.drawString("S'il vous plait confirmer et continuer.", 22, 58, 0x007F0E);
 
     	}
     	if (guiStage.equals("6")) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-    		fontRendererObj.drawString("Insufficient Funds!", 41, -2, 0x7F0000);
+    		fontRendererObj.drawString("Fond insuffisant!", 41, -2, 0x7F0000);
     		fontRendererObj.drawString("$" + shortAmt + " more needed!", 43, 8, 0x7F0000);
     		fontRendererObj.drawString("Withdraw Less", 97, 24, 0x007F0E);
-    		fontRendererObj.drawString("Return to Menu", 90, 51, 0x007F0E);
-        	fontRendererObj.drawString("Eject Card", 109, 78, 0x007F0E);
+    		fontRendererObj.drawString("Retourner au menu", 90, 51, 0x007F0E);
+        	fontRendererObj.drawString("Ejecter la carte", 109, 78, 0x007F0E);
     	}
     	if (guiStage.equals("7")) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
-    		fontRendererObj.drawString("Please enter the amount", 26, -12, 0xFFD800);
-    		fontRendererObj.drawString("you wish to withdraw:", 37, -2, 0xFFD800);
+    		fontRendererObj.drawString("S'il vous plait entrer le montant", 26, -12, 0xFFD800);
+    		fontRendererObj.drawString("vous voulez retirer:", 37, -2, 0xFFD800);
     		fontRendererObj.drawString("$" + withdrawCustom, 72, 24, 0x007F0E);
-        	fontRendererObj.drawString("Back", 12, 78, 0x007F0E);
+        	fontRendererObj.drawString("Precedant", 12, 78, 0x007F0E);
     	}
     	if (econ.parseInt(guiStage) >= 8) {
         	fontRendererObj.drawString("ATM", -21, -30, 0x404040);
